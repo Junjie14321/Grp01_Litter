@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+html, body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+main{
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+h1{
+    margin: 0;
+}
+/* #introBanner{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('../images/kelvin.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+} */
+#introBanner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+/* Video background */
+#bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Gradient overlay */
+#introBanner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    z-index: 2;
+}
+
+/* Centered text content */
+#introBanner .center {
+    position: relative;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* Optional: make the down arrow button visible above everything */
+#introBanner .downlogo {
+    position: absolute;
+    z-index: 3;
+}
+
+#introBanner h1{
+    font-size: 5rem;
+}
+#introBanner span{
+    font-size: 1.5rem;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+.raleway{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+.bitter{
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.section{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8f9fa;
+    position: relative;
+    text-align: center;
+    overflow-wrap: break-word;
+    display: flex;
+    align-items: center;  /* vertical centering */
+
+}
+.section img{
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Limit the image width */
+    border-radius: 10px; /* Optional: add some border radius */
+    max-height: 300px;
+}
+/* .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 1em auto 1em auto;
+    justify-content: center; 
+    align-items: center;
+} */
+/* .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: center;
+  text-align: left;
+  padding: 10px
+} */
+.downlogo{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('../images/down.svg');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.downlogo:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.dark-theme{
+    background-color: black;
+    color: white;
+}
+.light-theme .downlogo{
+    background-image: url('../images/down.svg') !important;
+}
+.light-theme{
+    background-color: whitesmoke;
+    color: black;
+}
+.light-theme .downlogo{
+    background-image: url('../images/blackdown.svg') !important;
+}
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.timeline-item .timeline-content {
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 2px;
+    position: relative;
+    width: 45%;
+}
+
+.timeline-item.left .timeline-content {
+    float: left;
+    text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+    float: right;
+    text-align: left;
+}
+
+.timeline-item::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.timeline-badge {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    z-index: 1;
+}
+
+    
+/* Mobile Responsive */
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1
+  }
+}
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-item .timeline-content,
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        width: 100%;
+        float: none;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .timeline-badge {
+        left: 0;
+        transform: translateX(0);
+    }
+}
