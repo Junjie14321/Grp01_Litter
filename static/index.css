@@ -91,7 +91,12 @@ h1{
     margin: 0 10px 0 10px !important;
 }
 .navbar a:hover{
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid wheat;
+    margin-top: 5px !important;
+    color: wheat !important;
+}
+#introBanner h1{
+    color: wheat;
 }
 .center{
   display: flex;
@@ -122,7 +127,7 @@ h1{
     overflow-wrap: break-word;
     display: flex;
     align-items: center;  /* vertical centering */
-
+    padding: 50px !important;
 }
 .section img{
     width: 100%;
