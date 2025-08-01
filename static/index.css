@@ -98,6 +98,9 @@ h1{
 #introBanner h1{
     color: wheat;
 }
+.section h3, h5{
+    font-style: italic;
+}
 .center{
   display: flex;
   flex-direction: column;
@@ -250,7 +253,11 @@ h1{
 .rounded-circle{
     width: 200px !important;
     height: 200px !important;
+    border: 8px solid black;
 }   
+.img-fluid{
+    border-radius: 5% !important;
+}
 /* Mobile Responsive */
 @media screen and (min-width: 800px) {
   .column {
