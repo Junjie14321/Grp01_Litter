@@ -157,6 +157,14 @@ h1{
   text-align: left;
   padding: 10px
 } */
+.survey-photo {
+  max-height: 480px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+
 .downlogo{
     position: absolute;
     bottom: 20px;
