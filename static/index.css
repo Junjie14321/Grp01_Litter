@@ -266,6 +266,7 @@ h1{
 .img-fluid{
     border-radius: 5% !important;
 }
+
 /* Mobile Responsive */
 @media screen and (min-width: 800px) {
   .column {
